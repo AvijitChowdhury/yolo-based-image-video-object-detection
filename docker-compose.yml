@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  demoyoloproject:
+    image: demoyoloproject
+    build:
+      context: .
+      dockerfile: ./Dockerfile
