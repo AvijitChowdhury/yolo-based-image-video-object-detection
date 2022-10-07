@@ -22,8 +22,8 @@ def object_detection_video():
     CONFIDENCE = 0.5
     SCORE_THRESHOLD = 0.5
     IOU_THRESHOLD = 0.5
-    config_path = r'model\yolov3-tiny.cfg'
-    weights_path = r'model\yolov3-tiny.weights'
+    config_path = r'model/yolov3-tiny.cfg'
+    weights_path = r'model/yolov3-tiny.weights'
     font_scale = 1
     thickness = 1
     url = "https://raw.githubusercontent.com/zhoroh/ObjectDetection/master/labels/coconames.txt"
