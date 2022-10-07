@@ -20,7 +20,7 @@ jsonschema==4.16.0
 MarkupSafe==2.1.1
 moviepy==1.0.3
 numpy==1.23.3
-python3-opencv
+
 opencv-python-headless
 opencv-contrib-python
 packaging==21.3
