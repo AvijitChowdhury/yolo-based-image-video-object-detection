@@ -18,6 +18,7 @@ from streamlit_embedcode import github_gist
 import object_detection_image
 import object_detection_video
 
+image = Image.open('myphoto.jpg')
 
 def main():
     new_title = '<p style="font-size: 42px;">Welcome to my Object Detection App!</p>'
@@ -32,10 +33,11 @@ def main():
     This YOLO object Detection project can detect 80 objects(i.e classes)
     in either a video or image. The full list of the classes can be found 
     [here](https://github.com/AvijitChowdhury/yolo-based-image-video-object-detection)
-    `Author:Avijit Chowdhury`"""
-    )
+    """
+    "`Author:Avijit Chowdhury`")
     
     st.sidebar.title("Select Activity")
+    
     choice  = st.sidebar.selectbox("MODE",("About","Object Detection(Image)","Object Detection(Video)"))
     #["Show Instruction","Landmark identification","Show the #source code", "About"]
     
@@ -64,7 +66,9 @@ def main():
 
     elif choice == "About":
         print()
-        
+    st.sidebar.image(image,caption="author")
+    st.sidebar.write('Author: Avijit Chowdhury') 
+    
 
 if __name__ == '__main__':
 		main()	
