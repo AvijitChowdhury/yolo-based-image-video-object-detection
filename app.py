@@ -1,23 +1,24 @@
 
-import streamlit as st
-import pandas as pd
-import cv2
-from PIL import Image, ImageEnhance
-import numpy as np
 import os
+import sys
 #import tensorflow as tf
 #import tensorflow_hub as hub
-import time ,sys
-from streamlit_embedcode import github_gist
-import urllib.request
-import urllib
-import moviepy.editor as moviepy
-import cv2
-import numpy as np
 import time
-import sys
+import urllib
+import urllib.request
+
+import cv2
+import moviepy.editor as moviepy
+import numpy as np
+import pandas as pd
+import streamlit as st
+from PIL import Image, ImageEnhance
+from streamlit_embedcode import github_gist
+
 import object_detection_image
 import object_detection_video
+
+
 def main():
     new_title = '<p style="font-size: 42px;">Welcome to my Object Detection App!</p>'
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
@@ -30,8 +31,10 @@ def main():
     
     This YOLO object Detection project can detect 80 objects(i.e classes)
     in either a video or image. The full list of the classes can be found 
-    [here](https://github.com/)"""
+    [here](https://github.com/AvijitChowdhury/yolo-based-image-video-object-detection)
+    `Author:Avijit Chowdhury`"""
     )
+    
     st.sidebar.title("Select Activity")
     choice  = st.sidebar.selectbox("MODE",("About","Object Detection(Image)","Object Detection(Video)"))
     #["Show Instruction","Landmark identification","Show the #source code", "About"]
