@@ -38,8 +38,8 @@ def object_detection_image():
         #f = open(r'C:\Users\Olazaah\Downloads\stream\labels\coconames.txt','r')
         #lines = f.readlines()
         #classNames = [line.strip() for line in lines]
-        config_path = r'model\yolov3-tiny.cfg'
-        weights_path = r'model\yolov3-tiny.weights'
+        config_path = r'model/yolov3-tiny.cfg'
+        weights_path = r'model/yolov3-tiny.weights'
         net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
         net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
         net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
