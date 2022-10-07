@@ -10,7 +10,7 @@ ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
-RUN apt install libgtk2.0-dev pkg-config
+
 EXPOSE 8501
 # Install pip requirements
 COPY requirements.txt .
@@ -25,5 +25,5 @@ COPY . /app
 # USER appuser
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-
+RUN apt install libgtk2.0-dev pkg-config
 CMD streamlit run --server.port $PORT app.py
